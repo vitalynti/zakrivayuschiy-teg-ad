@@ -27,8 +27,10 @@
   font-family: var(--font, Arial, sans-serif);
   line-height: normal;
   background-color: var(--bg-color, #fff);
-  background-image: var(--bg-image);
+  background-image: url("images/background.png");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -38,6 +40,7 @@
 .header {
   display: flex;
   justify-content: center;
+  /* УБЕРИ отсюда background-image */
 }
 
 .header__wrapper {
@@ -45,9 +48,10 @@
   border: 2px solid var(--main-color, #000);
   font-family: var(--font-accent, 'PressStart2P', monospace);
   text-align: center;
-  background-color: var(--bg-color, #fff);
+  background-color: var(--bg-color, #fff); /* белый фон квадрата */
   inline-size: clamp(23.438rem, 17.634rem + 29.018vi, 43.75rem);
   block-size: clamp(20.438rem, 19.705rem + 3.661vi, 23rem);
+  /* УБЕРИ отсюда background-image */
 }
 
 .header__title {
@@ -58,7 +62,7 @@
 
 .header__subtitle {
   padding-top: 20px;
-  font-size: clamp(0.875rem, 0.313rem + 1.8vi, 1.438rem);
+  font-size: clamp(0.875rem, 0.313rem + 1.8vi, 1.4375rem);
   text-transform: uppercase;
 }
 
@@ -73,10 +77,10 @@
 
 .cards__list {
   display: grid;
-  gap: 51px;
+  gap: 52px;
   width: clamp(23.438rem, 17.634rem + 29.018vi, 43.75rem);
   list-style: none;
-  padding: 0;
+  padding: 1.8px;
   margin: 0;
 }
 
@@ -147,12 +151,13 @@
   margin: 0;
 }
 
+.card__text__one {
+  letter-spacing: -0.04px;
+}
 .card__buttons {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 5px;
-  padding: 0 25px 25px 0;
 }
 
 .card__icon-button {
@@ -207,7 +212,7 @@
   display: flex;
   align-items: center;
   gap: 7px;
-  margin-top: 50px;
+  margin-top: -4px;
   overflow: hidden;
 }
 
