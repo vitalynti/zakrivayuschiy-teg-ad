@@ -27,7 +27,7 @@
   font-family: var(--font, Arial, sans-serif);
   line-height: normal;
   background-color: var(--bg-color, #fff);
-  background-image: url("images/background.png");
+ /* background-image: url("images/background.png");*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,7 +40,6 @@
 .header {
   display: flex;
   justify-content: center;
-  /* УБЕРИ отсюда background-image */
 }
 
 .header__wrapper {
@@ -154,6 +153,7 @@
 .card__text__one {
   letter-spacing: -0.04px;
 }
+
 .card__buttons {
   display: flex;
   justify-content: flex-end;
@@ -304,14 +304,16 @@
   mix-blend-mode: difference;
 }
 
-/* Фильтры для изображений */
 
 /* Адаптив для мобильных */
-@media (width <= 375px) {
+@media (max-width: 375px) {
   .header__wrapper {
     width: 100%;
   }
   
+  body {
+      background-color: red !important; /* Яркий цвет для проверки */
+  }
   .cards__list {
     width: 100%;
   }
