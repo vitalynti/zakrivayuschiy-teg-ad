@@ -29,9 +29,9 @@
             
             <div class="image__wrapper">
               <img
-                src="images/image (1).png"
+                src="images/image-1.png"
                 alt="Магазин-машина"
-                class="card__image filter__blur"
+                class="card__image filter-radiant"
                 loading="lazy"
               />
               <span class="label__text">&lt;/HTML&gt;</span>
@@ -63,9 +63,9 @@
             
             <div class="image__wrapper">
               <img
-                src="images/image (2).png"
+                src="images/image-2.png"
                 alt="Изучение основ"
-                class="card__image filter__brightness"
+                class="card__image filter-bold"
                 loading="lazy"
               />
               <span class="label__text">&lt;/HTML&gt;</span>
@@ -97,9 +97,9 @@
             
             <div class="image__wrapper">
               <img
-                src="images/image (3).png"
+                src="images/image-3.png"
                 alt="Работа над проектами"
-                class="card__image filter__contrast"
+                class="card__image filter-antique"
                 loading="lazy"
               />
               <span class="label__text">&lt;CSS&gt;</span>
@@ -131,9 +131,9 @@
             
             <div class="image__wrapper">
               <img
-                src="images/image (4).png"
+                src="images/image-4.png"
                 alt="Совершенствование навыков"
-                class="card__image filter__sepia"
+                class="card__image filter-classic"
                 loading="lazy"
               />
               <span class="label__text">&lt;desigions&gt;</span>
@@ -165,9 +165,9 @@
             
             <div class="image__wrapper">
               <img
-                src="images/image (5).png"
+                src="images/image-5.png"
                 alt="Взаимопомощь в обучении"
-                class="card__image filter__grayscale"
+                class="card__image filter-psychedelic"
                 loading="lazy"
               />
               <span class="label__text">&lt;care&gt;</span>
@@ -199,9 +199,9 @@
             
             <div class="image__wrapper">
               <img
-                src="images/image (6).png"
+                src="images/image-6.png"
                 alt="Поиск решений"
-                class="card__image filter__hue-rotate"
+                class="card__image filter-alternate"
                 loading="lazy"
               />
               <span class="label__text">&lt;support&gt;</span>
@@ -233,9 +233,9 @@
             
             <div class="image__wrapper">
               <img
-                src="images/image (7).png"
+                src="images/image-7.png"
                 alt="Перерывы и восстановление"
-                class="card__image filter__invert"
+                class="card__image filter-misty"
                 loading="lazy"
               />
               <span class="label__text">&lt;lifes-style: none&gt;</span>
@@ -267,9 +267,9 @@
             
             <div class="image__wrapper">
               <img
-                src="images/image (8).png"
+                src="images/image-8.png"
                 alt="Достижения и планы"
-                class="card__image filter__mix"
+                class="card__image filter-golden"
                 loading="lazy"
               />
               <span class="label__text">&lt;experience&gt;</span>
@@ -297,25 +297,28 @@
       </ul>
       
       <button class="button button__popup-open" type="button">
-        <svg class="icon-floppy" width="20" height="20">
-          <use xlink:href="./svg/sprite.svg#disketa"></use>
-        </svg>
+        <svg class="icon-floppy" width="28" height="28">
+      <use xlink:href="./svg/sprite.svg#disketa"></use>
+    </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
 
-      <dialog class="popup">
+    <dialog class="popup">
+      <form method="dialog">
         <div class="popup__text-open">
           <svg class="icon-floppy" width="28" height="28">
             <use xlink:href="./svg/sprite.svg#disketa"></use>
           </svg>
           <p class="text__popup">Вставьте дискету, чтобы продолжить</p>
         </div>
-        <button class="button__popup-close button" type="button">
-          <span class="button__text">Ок</span>
-        </button>
-      </dialog>
+       <button class="button button__popup-open" type="button" onclick="document.querySelector('.popup').showModal()">
+          <svg class="icon-floppy" width="20" height="20">
+            <use xlink:href="./svg/sprite.svg#disketa"></use>
+          </svg>
+          <span class="button__text">Сохранить на память</span>
+      </button>
+      </form>
+    </dialog>
     </main>
-
-    <use xlink:href="./svg/sprite.svg#disketa"></use>
   </body>
 </html>

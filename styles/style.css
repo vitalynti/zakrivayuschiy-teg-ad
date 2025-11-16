@@ -10,28 +10,14 @@
 
 */
 
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 .page {
   color: var(--main-color, #000);
   font-family: var(--font, Arial, sans-serif);
   line-height: normal;
   background-color: var(--bg-color, #fff);
- /* background-image: url("images/background.png");*/
-  background-size: cover;
-  background-position: center;
+  background-image: var(--background-image);
+  background-size: 1440px 960px;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--card-font-weight, 400);
@@ -47,10 +33,9 @@
   border: 2px solid var(--main-color, #000);
   font-family: var(--font-accent, 'PressStart2P', monospace);
   text-align: center;
-  background-color: var(--bg-color, #fff); /* белый фон квадрата */
+  background-color: var(--bg-color, #fff);
   inline-size: clamp(23.438rem, 17.634rem + 29.018vi, 43.75rem);
   block-size: clamp(20.438rem, 19.705rem + 3.661vi, 23rem);
-  /* УБЕРИ отсюда background-image */
 }
 
 .header__title {
@@ -253,6 +238,7 @@
   border: 2px solid var(--main-color, #000);
   background-color: var(--bg-color, #fff);
   max-width: 353px;
+  margin: auto;
 }
 
 .popup[open] {
@@ -304,18 +290,57 @@
   mix-blend-mode: difference;
 }
 
+.icon-floppy {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: black !important;
+  background: red !important;
+  border: 3px solid blue !important;
+}
 
+/* Альтернативные названия */
+.filter-misty {
+  filter: blur(2px);
+}
+
+.filter-radiant {
+  filter: brightness(1.2);
+}
+
+.filter-bold {
+  filter: contrast(1.3);
+}
+
+.filter-antique {
+  filter: sepia(0.8);
+}
+
+.filter-classic {
+  filter: grayscale(0.7);
+}
+
+.filter-psychedelic {
+  filter: hue-rotate(90deg);
+}
+
+.filter-alternate {
+  filter: invert(0.8);
+}
+
+.filter-golden {
+  filter: sepia(0.5) brightness(1.1) contrast(1.2);
+}
 /* Адаптив для мобильных */
-@media (max-width: 375px) {
+@media (max-width: 380px) {
   .header__wrapper {
     width: 100%;
+    inline-size: 100%; 
   }
   
-  body {
-      background-color: red !important; /* Яркий цвет для проверки */
-  }
   .cards__list {
     width: 100%;
+    margin: -3px;
   }
   
   .label__text {
