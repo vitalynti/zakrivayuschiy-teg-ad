@@ -160,7 +160,7 @@
   outline: none;
 }
 
-.card__icon-button:focus-visible {
+.card__icon-button:focus{
   border: 2px solid var(--main-color, #000);
 }
 
@@ -229,8 +229,9 @@
   outline: none;
 }
 
-.button:focus-visible {
+.button:focus {
   box-shadow: 2px 2px 0 0 var(--main-color, #000);
+  transition: box-shadow 0.3s ease;
 }
 
 .popup {
@@ -290,15 +291,6 @@
   mix-blend-mode: difference;
 }
 
-.icon-floppy {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  color: black !important;
-  background: red !important;
-  border: 3px solid blue !important;
-}
-
 /* Альтернативные названия */
 .filter-misty {
   filter: blur(2px);
@@ -335,7 +327,7 @@
 @media (max-width: 380px) {
   .header__wrapper {
     width: 100%;
-    inline-size: 100%; 
+    inline-size: 100%;
   }
   
   .cards__list {

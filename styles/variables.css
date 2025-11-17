@@ -6,8 +6,10 @@
     --bg-color: #fff;
     --button-text-color: #fff;
     --card-font-weight: 400;
+    --heart-contour:#000;
     --card-title-font-weight: 700;
-     --background-image: 
+    --background-image: 
+    
     repeating-linear-gradient(
       to right,
       #d3d3d3 0 2px,
@@ -23,5 +25,13 @@
       #e7e7e7 0.01%,
       #1a1a1a
     );
-
-}
+    --contour-color: #000000;
+    --main-body-color: #000000;
+    --core-color: #ffffff;
+    --animation-fill-color: #ff0000;
+    --spark-color: #ff0000;
+    --heart-sparks: red;
+    --heart-active-color: red;
+    --contour-color: #000000;
+    --animation-fill-color: #ff0000;
+  }
