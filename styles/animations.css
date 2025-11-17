@@ -8,7 +8,6 @@
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 /* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like. */
-/* Keyframes для анимации сердца */
 @keyframes scale {
   0% {
     transform: scale(1);
@@ -58,6 +57,7 @@
   fill: var(--animation-fill-color, #ff0000);
 }
 
+/* Наведение - плавное заполнение черным */
 .card__icon-button:hover .core {
   fill: var(--contour-color, #000000);
   transition: fill 0.3s linear;
@@ -68,6 +68,7 @@
   transition: fill 0.3s 0.05s linear;
 }
 
+/* Зажим (active) - красное заполнение с такими же настройками как при наведении */
 .card__icon-button:active .core {
   fill: var(--animation-fill-color, #ff0000);
   transition: fill 0.3s linear;
@@ -78,25 +79,34 @@
   transition: fill 0.3s 0.05s linear;
 }
 
+/* Клик (чекбокс) - полная анимация */
 .like-checkbox:checked + .like-icon .core {
   fill: var(--animation-fill-color, #ff0000);
+  transition: fill 0.3s linear;
 }
 
 .like-checkbox:checked + .like-icon .main-body {
   fill: var(--animation-fill-color, #ff0000);
+  transition: fill 0.3s 0.06s linear;
 }
 
 .like-checkbox:checked + .like-icon .contour {
   fill: var(--animation-fill-color, #ff0000);
+  transition: fill 0.3s 0.06s linear;
 }
 
 .like-checkbox:checked + .like-icon .heart {
-  transform-origin: center;
   animation: scale 0.3s 0.1s ease-in;
 }
 
 .like-checkbox:checked + .like-icon .sparks {
   animation: sparks 0.3s 0.3s ease-in;
+}
+
+/* Возврат контура при снятии лайка */
+.like-checkbox:not(:checked) + .like-icon .contour {
+  fill: var(--contour-color, #000000);
+  transition: fill 0.1s linear;
 }
 
 .card__icon-button {
