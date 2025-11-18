@@ -16,11 +16,11 @@
   line-height: normal;
   background-color: var(--bg-color, #fff);
   background-image: var(--background-image);
-  background-size: 1440px 960px;
   background-repeat: no-repeat;
   min-inline-size: 320px;
   min-block-size: 100dvh;
   font-variation-settings: 'wght' var(--card-font-weight, 400);
+  background-size: 1440px 960px;
 }
 
 .header {
